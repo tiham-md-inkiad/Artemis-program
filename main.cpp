@@ -507,6 +507,34 @@ glBegin(GL_POLYGON); ///hill 01
     glVertex2f(0.5f, 0.5f);
 
     glEnd();
+    //house-3
+glBegin(GL_QUADS);
+
+   glColor3ub(255,228,181);
+
+    glVertex2f(-0.44f, 0.81f);
+    glVertex2f(-0.44f, 0.28f);
+    glVertex2f(-0.28f, 0.28f);
+    glVertex2f(-0.28f, 0.81f);
+    glEnd();
+
+glBegin(GL_QUADS);
+    glColor3ub(255,228,181);
+
+    glVertex2f(-0.41f, 0.83f);
+    glVertex2f(-0.41f, 0.80f);
+    glVertex2f(-0.38f, 0.80f);
+    glVertex2f(-0.38f, 0.83f);
+    glEnd();
+glBegin(GL_QUADS);
+    glColor3ub(255,99,71);
+
+    glVertex2f(-0.44f, 0.81f);
+    glVertex2f(-0.44f, 0.80f);
+    glVertex2f(-0.28f, 0.80f);
+    glVertex2f(-0.28f, 0.81f);
+    glEnd();
+
 
   //////////////////////////////////////////////////////////rocket
 glPushMatrix();
