@@ -168,6 +168,85 @@ glEnd();
 
     }
     glEnd ();
+///sun
+///------------------------cloud
+
+
+//glLoadIdentity();
+    glPushMatrix();
+    glTranslatef(position2,0.0f, 0.0f);
+
+	GLfloat p7=0.2f; GLfloat q7= 0.83f; GLfloat r7 = 0.05f;
+    int tringle7=40;
+    GLfloat tp7 =2.0f * PI  ;
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p7,q7);
+    for(int b= 0;b<=tringle7; b++)
+    {
+        glVertex2f (
+                    p7+(r7*cos(b*tp7/tringle7)),
+                    q7+(r7*sin(b*tp7/tringle7))
+                    );
+
+    }
+    glEnd ();
+
+
+
+  GLfloat p8=0.27f; GLfloat q8= 0.85f; GLfloat r8 = 0.05f;
+    int tringle8=40;
+    GLfloat tp8 =2.0f * PI  ;
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p8,q8);
+    for(int c= 0;c<=tringle8; c++)
+    {
+        glVertex2f (
+                    p8+(r8*cos(c*tp8/tringle8)),
+                    q8+(r8*sin(c*tp8/tringle8))
+                    );
+
+    }
+    glEnd ();
+
+
+     GLfloat p9=0.15f; GLfloat q9= 0.85f; GLfloat r9 = 0.05f;
+    int tringle9=40;
+    GLfloat tp9 =2.0f * PI  ;
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p9,q9);
+    for(int c= 0;c<=tringle9; c++)
+    {
+        glVertex2f (
+                    p9+(r9*cos(c*tp9/tringle9)),
+                    q9+(r9*sin(c*tp9/tringle9))
+                    );
+
+    }
+    glEnd ();
+
+     GLfloat p10=0.22f; GLfloat q10= 0.87f; GLfloat r10 = 0.05f;
+    int tringle10=40;
+    GLfloat tp10 =2.0f * PI  ;
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,255);
+    glVertex2f (p10,q10);
+    for(int c= 0;c<=tringle10; c++)
+    {
+        glVertex2f (
+                    p10+(r10*cos(c*tp10/tringle10)),
+                    q10+(r10*sin(c*tp10/tringle10))
+                    );
+
+    }
+    glEnd ();
+    glPopMatrix();
+
+
+
+///-------------------------end cloud
 
 
 glBegin(GL_POLYGON); ///hill 01
