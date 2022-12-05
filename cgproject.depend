@@ -233,3 +233,10 @@
 	<GL/glut.h>
 	<math.h>
 
+1670249248 source:f:\git\main project\main.cpp
+	<windows.h>
+	<cstdio>
+	<GL/gl.h>
+	<GL/glut.h>
+	<math.h>
+

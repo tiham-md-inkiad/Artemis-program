@@ -150,6 +150,25 @@ glVertex2f(1.0f, 1.0f);
 glVertex2f(-1.0f, 1.0f);
 glEnd();
 
+///Sun
+    glPushMatrix();
+
+   GLfloat p1=0.45f; GLfloat q1= 0.75f; GLfloat r1 = 0.10f;
+    int tringle2=40;
+    GLfloat tp2 =4.0f * PI  ;
+    glBegin (GL_TRIANGLE_FAN);
+    glColor3ub ( 255,255,0);
+    glVertex2f (p1,q1);
+    for(int i= 0;  i<=tringle2; i++)
+    {
+        glVertex2f (
+                    p1+(r1*cos(i*tp2/tringle2)),
+                    q1+(r1*sin(i*tp2/tringle2))
+                    );
+
+    }
+    glEnd ();
+
 
 glBegin(GL_POLYGON); ///hill 01
     glColor3f(0.0f,0.2f,0.0f);
