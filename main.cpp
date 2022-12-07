@@ -701,6 +701,314 @@ glPushMatrix();
 
 glPopMatrix();
 
+/////////////////////////////////////////////////////////////////////////LAUNCH PAD ROCKET HOLDER
+
+   glPushMatrix();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.6f); //A
+   glVertex2f(-0.3f,0.4f); //B
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.4f); //B
+   glVertex2f(-0.1f,0.4f); //H
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.4f); //H
+   glVertex2f(-0.2f,0.5f); //T
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.4f); //H
+   glVertex2f(-0.1f,0.6f); //A
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.4f); //B
+   glVertex2f(-0.3f,-0.8f); //U
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.4f); //H
+   glVertex2f(-0.1f,-0.8f); //G
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.2f); //I
+   glVertex2f(-0.1f,0.2f); //J
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.0f); //K
+   glVertex2f(-0.1f,0.0f); //L
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,-0.2f); //M
+   glVertex2f(-0.1f,-0.2f); //N
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.4f); //D
+   glVertex2f(-0.1f,-0.4f); //P
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.6f); //E
+   glVertex2f(-0.1f,-0.6f); //Q
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.8f); //F
+   glVertex2f(-0.1f,-0.8f); //G
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.8f); //F
+   glVertex2f(-0.5f,-0.4f); //D
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,-0.2f); //M
+   glVertex2f(-0.5f,-0.4f); //D
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.8f); //F
+   glVertex2f(-0.1f,-0.4f); //P
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.6f); //E
+   glVertex2f(-0.1f,-0.2f); //N
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.5f,-0.6f); //E
+   glVertex2f(-0.3f,-0.8f); //U
+   glEnd();
+
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,-0.8f); //G
+   glVertex2f(-0.5f,-0.4f); //D
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.4f,-0.3f); //C
+   glVertex2f(-0.1f,-0.6f); //Q
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,-0.2f); //M
+   glVertex2f(-0.1f,-0.4f); //P
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,-0.8f); //U
+   glVertex2f(-0.1f,-0.6f); //Q
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.4f); //B
+   glVertex2f(-0.1f,0.2f); //J
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.4f); //H
+   glVertex2f(-0.3f,0.2f); //I
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.0f); //L
+   glVertex2f(-0.3f,0.2f); //I
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.0f); //K
+   glVertex2f(-0.1f,0.2f); //J
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,0.0f); //K
+    glVertex2f(-0.1f,-0.2f); //N
+   glEnd();
+
+   glBegin(GL_LINES);
+   glColor3ub(187,188,192);
+   glVertex2f(-0.3f,-0.2f); //M
+   glVertex2f(-0.1f,0.0f); //L
+   glEnd();
+   glPopMatrix();
+///////////////////////////////////////////////////////////////////////////************* smoke
+
+   if(smoke==false)
+   {
+       glPushMatrix();
+
+       glBegin(GL_QUADS); /////////////////////////smoke box
+   glColor3ub(240,240,240);
+   glVertex2f(0.05f,-0.8f);
+   glVertex2f(0.05f,-1.0f);
+   glVertex2f(0.44f,-1.0f);
+   glVertex2f(0.44f,-0.8f);
+   glEnd();
+
+   GLfloat p3=0.55f; GLfloat q3=-0.9f; GLfloat r3=-0.15f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(p3,q3);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  p3+(r3*cos(i*tp1/triangle1)), q3+(r3*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   GLfloat p4=-0.06f; GLfloat q4=-0.9f; GLfloat r4=-0.15f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(p4,q4);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  p4+(r4*cos(i*tp1/triangle1)), q4+(r4*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   GLfloat p5=-0.2f; GLfloat q5=-0.75f; GLfloat r5=-0.15f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(p5,q5);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  p5+(r5*cos(i*tp1/triangle1)), q5+(r5*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   GLfloat p6=-0.3f; GLfloat q6=-0.9f; GLfloat r6=-0.15f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(p6,q6);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  p6+(r6*cos(i*tp1/triangle1)), q6+(r6*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   GLfloat p51=0.69f; GLfloat q51=-0.75f; GLfloat r51=-0.15f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(p51,q51);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  p51+(r51*cos(i*tp1/triangle1)), q51+(r51*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   GLfloat p61=0.79f; GLfloat q61=-0.9f; GLfloat r61=-0.15f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(p61,q61);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  p61+(r61*cos(i*tp1/triangle1)), q61+(r61*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+glPopMatrix();
+
+/////////////////////////////////////////////////////////////////////////////////////////***************fire
+glPushMatrix();
+   glTranslatef(0,-position, 0.0f);
+
+   glBegin(GL_TRIANGLES);//////////////////////////////////////////left fire
+   glColor3ub(240,192,11);
+   glVertex2f(0.04f, -0.79f);
+   glVertex2f(0.075f, -0.95f);
+   glVertex2f(0.11f, -0.79f);
+   glEnd();
+
+   glBegin(GL_TRIANGLES);//////////////////////////////////////////center fire
+   glColor3ub(240,192,11);
+   glVertex2f(0.205f, -0.79f);
+   glVertex2f(0.24f, -0.95f);
+   glVertex2f(0.275f, -0.79f);
+   glEnd();
+
+   glBegin(GL_TRIANGLES);//////////////////////////////////////////right fire
+   glColor3ub(240,192,11);
+   glVertex2f(0.37f, -0.79f);
+   glVertex2f(0.405f, -0.95f);
+   glVertex2f(0.44f, -0.79f);
+   glEnd();
+   glPopMatrix();
+
+   }
+
+   glPushMatrix();
+
+   glBegin(GL_QUADS); /////////////////////////ROCKET HOLDER UP
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,0.22f);
+   glVertex2f(-0.1f,0.12f);
+   glVertex2f(0.25f,0.12f);
+   glVertex2f(0.25f,0.22f);
+   glEnd();
+
+   glBegin(GL_QUADS); /////////////////////////ROCKET HOLDER DOWN
+   glColor3ub(187,188,192);
+   glVertex2f(-0.1f,-0.08f);
+   glVertex2f(-0.1f,-0.18f);
+   glVertex2f(0.25f,-0.18f);
+   glVertex2f(0.25f,-0.08f);
+   glEnd();
+
+
+   glPopMatrix();
 glFlush();
 
 }
