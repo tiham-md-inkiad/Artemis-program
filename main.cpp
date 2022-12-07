@@ -559,7 +559,7 @@ glPushMatrix();
    glVertex2f(0.34f, 0.42f);//c
    glEnd();
 
-   GLfloat pbg=0.24f; GLfloat qbg=0.25f; GLfloat rbg=-0.077f;////////////////////glass background
+   GLfloat pbg=0.24f; GLfloat qbg=0.25f; GLfloat rbg=-0.077f;///////////////glass background
 
    glBegin(GL_TRIANGLE_FAN);
    glColor3ub(130,130,130);
@@ -688,7 +688,7 @@ glPushMatrix();
    glEnd();
 glPopMatrix();
 
-////////////////////////////////////////////////////////////////ROCKET LAUNCHER BASE
+/////////////////////////////////////////////////////ROCKET LAUNCHER BASE
 glPushMatrix();
 
    glBegin(GL_POLYGON);
@@ -701,7 +701,7 @@ glPushMatrix();
 
 glPopMatrix();
 
-/////////////////////////////////////////////////////////////////////////LAUNCH PAD ROCKET HOLDER
+//////////////////////////////////////////////////LAUNCH PAD ROCKET HOLDER
 
    glPushMatrix();
 
