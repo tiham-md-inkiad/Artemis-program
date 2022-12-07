@@ -39,7 +39,7 @@ GLfloat speed3 = 0.0f;
 GLfloat s=0.5;
 
 
-void update(int value) { ////////////////////////////////////////////////////////////////////////fly
+void update(int value) { //////////////////////////////////////////////fly
 
     if(position >1.0f) ////if(position <1){position = -0.9f; position -=speed;}
         position = 1.0f;
@@ -50,7 +50,7 @@ glutPostRedisplay();
 glutTimerFunc(100, update, 0);
 }
 
-void update1(int value1) {/////////////////////////////////////////////////////////////////////// space
+void update1(int value1) {///////////////////////////////////////////////// space
 
     if(space==false)
     {if(position1 >1.0)
