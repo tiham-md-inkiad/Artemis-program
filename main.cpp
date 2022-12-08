@@ -63,7 +63,7 @@ glutPostRedisplay();
 glutTimerFunc(100, update1, 0);
 }
 
-void update2(int value2) {////////////////////////////////////////////////////////landing
+void update2(int value2) {////////////////////////////////////landing
 
     if(land==false){
     if(position2 <-1.3)
@@ -84,7 +84,7 @@ glutPostRedisplay();
 glutTimerFunc(100, update3, 0);
 }
 
-void update4(int value4) {/////////////////////////////////////////////////////////////////////// space
+void update4(int value4) {//////////////////////////////////////// space
 
     if(mover==false)
     {if(position3 <-1.5)
@@ -536,7 +536,7 @@ glBegin(GL_QUADS);
     glEnd();
 
 
-  //////////////////////////////////////////////////////////rocket
+  //////////////////////////////////////////////rocket
 glPushMatrix();
 
    glTranslatef(0,-position, 0.0f);
@@ -642,7 +642,7 @@ glPushMatrix();
    glEnd();
 
 
-   ///////////////////////////////////////////RIGHT WING
+   ///////////////////////////////////////RIGHT WING
    glBegin(GL_POLYGON);
    glColor3ub(230,230,230);
 
