@@ -1515,7 +1515,23 @@ if(fire)
 }
 glPopMatrix();
 
+///Earth From moon
+{
+       GLfloat pm=0.24f; GLfloat qm=0.40f; GLfloat rm=-0.077f;
 
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(40, 122, 184);
+   glVertex2f(pm,qm);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  pm+(rm*cos(i*tp1/triangle1)), qm+(rm*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   glPopMatrix();
+   }
 
 
 
