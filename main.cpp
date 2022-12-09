@@ -1333,63 +1333,234 @@ glPushMatrix();
    glPushMatrix();
 
 
-    glBegin(GL_QUADS);              // Each set of 4 vertices form a quad
-	glColor3ub(255,128,0); // Red
-
-	glVertex2f(-1.0f, -0.3f);    // x, y
-	glVertex2f(1.0f, -0.3f);
-	glVertex2f(1.0f, -1.f);    // x, y
-	glVertex2f(-1.f, -1.5f);
 
 
+///************************rocket landing on moon
 
-	    glBegin(GL_QUADS);              // Each set of 4 vertices form a quad
-	glColor3ub(255,255,102); // Red
+       glPushMatrix();
 
-	glVertex2f(-1.0f, -0.3f);    // x, y
-	glVertex2f(1.0f, -0.3f);
-	glVertex2f(1.0f, 1.f);    // x, y
-	glVertex2f(-1.f, 1.5f);
-
-	glEnd();
-
-	glBegin(GL_POLYGON);            // These vertices form a closed polygon
-	glColor3ub(255,153,51); // Yellow
-
-	glVertex2f(-1.f, 0.1f);
-	glVertex2f(-0.99f, 0.13f);
-	glVertex2f(-0.98f, 0.15f);
-	glVertex2f(-0.98f, 0.16f);
-	glVertex2f(-0.97f, 0.17f);
-	glVertex2f(-0.97f, 0.18f);
-	glVertex2f(-0.97f, 0.2f);
-	glVertex2f(-0.96f, 0.2f);
-	glVertex2f(-0.96f, 0.19f);
-	glVertex2f(-0.92f, 0.12f);
-	glVertex2f(-0.90f, 0.14f);
-	glVertex2f(-0.90f, 0.2f);
-    glVertex2f(-0.85f, 0.2f);
-	glVertex2f(-0.8f, 0.0f);
-	glVertex2f(-0.78f, -0.04f);
-	glVertex2f(-0.67f, -0.3f);
-    glVertex2f(-0.65f, -0.32f);
-	glVertex2f(-0.65f, -0.31f);
-	glVertex2f(-1.f, -0.3f);
-	//glVertex2f(-0.92f, 0.12f);
-	//glVertex2f(-0.4f, 0.6f);
-	//glVertex2f(-0.3f, 0.4f);
-
-	glEnd();
+       glTranslatef(0.0f,position2, 0.0f);
+   glTranslated(0.3,1.0,0.0);
+   glScalef(0.4f,0.4f,0.0f);
 
 
+   glBegin(GL_TRIANGLES); ///HEAD
+   glColor3ub(238,28,37);
+
+   glVertex2f(0.24f,0.6f);
+   glVertex2f(0.14f, 0.42f);
+   glVertex2f(0.34f, 0.42f);
+   glEnd();
+
+
+   glBegin(GL_POLYGON);///HEAD  Lower Body
+   glColor3ub(230,230,230);
+   glVertex2f(0.14f, 0.42f);
+   glVertex2f(0.14f, 0.08f);
+   glVertex2f(0.15f, 0.06f);
+   glVertex2f(0.33f, 0.06f);
+   glVertex2f(0.34f, 0.08f);
+   glVertex2f(0.34f, 0.42f);
+   glEnd();
+
+   GLfloat pbg=0.24f; GLfloat qbg=0.25f; GLfloat rbg=-0.077f;///glass background
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(130,130,130);
+   glVertex2f(pbg,qbg);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  pbg+(rbg*cos(i*tp1/triangle1)), qbg+(rbg*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   GLfloat pg=0.24f; GLfloat qg=0.25f; GLfloat rg=-0.07f; ///glass
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(35,172,196);
+   glVertex2f(pg,qg);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  pg+(rg*cos(i*tp1/triangle1)), qg+(rg*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   glBegin(GL_QUADS); ///HEAD Lower Body shadow
+   glColor3ub(187,188,192);
+   glVertex2f(0.33f, 0.42f);
+   glVertex2f(0.33f, 0.06f);
+   glVertex2f(0.34f, 0.08f);
+   glVertex2f(0.34f, 0.42f);
+   glEnd();
+
+   glBegin(GL_QUADS); ///HEAD Lower Body QUAD
+   glColor3ub(187,188,192);
+   glVertex2f(0.15f, 0.06f);
+   glVertex2f(0.15f, 0.01f);
+   glVertex2f(0.33f, 0.01f);
+   glVertex2f(0.33f, 0.06f);
+   glEnd();
+
+   glBegin(GL_POLYGON); /// UNDER BODY QUAD
+   glColor3ub(230,230,230);
+   glVertex2f(0.15f, 0.01f);
+   glVertex2f(0.14f, -0.01f);
+   glVertex2f(0.14f, -0.74f);
+   glVertex2f(0.34f, -0.74f);
+   glVertex2f(0.34f, -0.01f);
+   glVertex2f(0.33f, 0.01f);
+   glEnd();
+
+   glBegin(GL_QUADS); ///UNDER BODY QUAD shadow
+   glColor3ub(187,188,192);
+   glVertex2f(0.33f, -0.74f);
+   glVertex2f(0.34f, -0.74f);
+   glVertex2f(0.34f, -0.01f);
+   glVertex2f(0.33f, 0.01f);
+   glEnd();
+
+   glBegin(GL_POLYGON); /// LEFT WING
+   glColor3ub(230,230,230);
+
+
+   glVertex2f(0.1f, -0.25f);
+   glVertex2f(0.05f, -0.25f);
+   glVertex2f(0.01f, -0.74f);
+   glVertex2f(0.14f, -0.74f);
+   glVertex2f(0.14f, -0.23f);
+
+
+   glEnd();
+
+   glBegin(GL_QUADS); ///lEFT WING shadow
+   glColor3ub(187,188,192);
+   glVertex2f(0.1f, -0.25f);
+   glVertex2f(0.06f, -0.74f);
+   glVertex2f(0.14f, -0.74f);
+   glVertex2f(0.14f, -0.23f);
+   glEnd();
+
+
+   glBegin(GL_POLYGON);  ///RIGHT WING
+   glColor3ub(230,230,230);
+
+
+   glVertex2f(0.34f, -0.74f);
+   glVertex2f(0.47f, -0.74f);
+   glVertex2f(0.43f, -0.25f);
+   glVertex2f(0.38f, -0.25f);
+   glVertex2f(0.34f, -0.23f);
+
+   glEnd();
+
+   glBegin(GL_QUADS); ///RIGHT WING shadow
+   glColor3ub(187,188,192);
+   glVertex2f(0.38f, -0.25f);
+   glVertex2f(0.43f, -0.74f);
+   glVertex2f(0.47f, -0.74f);
+   glVertex2f(0.43f, -0.25f);
+   glEnd();
+
+   glBegin(GL_QUADS); ///LEFT fIRE EXIT
+   glColor3ub(96,96,96);
+   glVertex2f(0.05f, -0.74f);
+   glVertex2f(0.04f, -0.79f);
+   glVertex2f(0.11f, -0.79f);
+   glVertex2f(0.1f, -0.74f);
+   glEnd();
+
+   glBegin(GL_QUADS); ///CENTER fIRE EXIT
+   glColor3ub(96,96,96);
+   glVertex2f(0.215f, -0.74f);
+   glVertex2f(0.205f, -0.79f);
+   glVertex2f(0.275f, -0.79f);
+   glVertex2f(0.265f, -0.74f);
+   glEnd();
+
+   glBegin(GL_QUADS); ///RIGHT fIRE EXIT
+   glColor3ub(96,96,96);
+   glVertex2f(0.38f, -0.74f);
+   glVertex2f(0.37f, -0.79f);
+   glVertex2f(0.44f, -0.79f);
+   glVertex2f(0.43f, -0.74f);
+   glEnd();
+
+
+if(fire)
+{
+   glBegin(GL_TRIANGLES);///left fire
+   glColor3ub(240,192,11);
+   glVertex2f(0.04f, -0.79f);
+   glVertex2f(0.075f, -0.95f);
+   glVertex2f(0.11f, -0.79f);
+   glEnd();
+
+   glBegin(GL_TRIANGLES);///center fire
+   glColor3ub(240,192,11);
+   glVertex2f(0.205f, -0.79f);
+   glVertex2f(0.24f, -0.95f);
+   glVertex2f(0.275f, -0.79f);
+   glEnd();
+
+   glBegin(GL_TRIANGLES);///right fire
+   glColor3ub(240,192,11);
+   glVertex2f(0.37f, -0.79f);
+   glVertex2f(0.405f, -0.95f);
+   glVertex2f(0.44f, -0.79f);
+   glEnd();
+}
+glPopMatrix();
+
+
+
+
+
+}
 glFlush();
 
 }
+
+void handleMouse(int button, int state, int x, int y)
+{
+if (button == GLUT_LEFT_BUTTON)
+{
+    speed1 += 0.1f;
+}
+if (button == GLUT_RIGHT_BUTTON)
+{speed1 -= 0.1f;   }
+glutPostRedisplay();
+}
+
+
+void handleKeypress(unsigned char key, int x, int y)
+{
+switch (key) {
+
+
+case 'l':
+    land=false;
+    break;
+
+
+glutPostRedisplay();
+}
+}
+
 int main(int argc, char** argv) {
 glutInit(&argc, argv);
 glutCreateWindow("Project");
 glutInitWindowSize(1920,1080);
 glutDisplayFunc(display);
+
+glutTimerFunc(100, update2, 0);
+
+glutKeyboardFunc(handleKeypress);
+glutMouseFunc(handleMouse);
+
 glutMainLoop();
 return 0;
 }
