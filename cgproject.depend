@@ -240,3 +240,10 @@
 	<GL/glut.h>
 	<math.h>
 
+1670659268 source:g:\8th semester\graphics\final\project files\artemis-program\main.cpp
+	<windows.h>
+	<cstdio>
+	<GL/gl.h>
+	<GL/glut.h>
+	<math.h>
+
