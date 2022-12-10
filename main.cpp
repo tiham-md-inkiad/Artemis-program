@@ -1533,9 +1533,20 @@ glPopMatrix();
    glPopMatrix();
    }
 
-
+///Rocket Door
+   if(door==false)
+    {
+   glBegin(GL_QUADS);
+   glColor3ub(110,110,110);
+   glVertex2f(0.16f, -0.1f);//A'
+   glVertex2f(0.16f, -0.6f);//B'
+   glVertex2f(0.32f, -0.6f);//C'
+   glVertex2f(0.32f, -0.1f);//D'
+   glEnd();
 
 }
+
+   }
 glFlush();
 
 }
@@ -1560,7 +1571,9 @@ switch (key) {
 case 'l':
     land=false;
     break;
-
+case 'd':
+    door=false;
+    break;
 
 glutPostRedisplay();
 }
@@ -1570,6 +1583,7 @@ int main(int argc, char** argv) {
 glutInit(&argc, argv);
 glutCreateWindow("Project");
 glutInitWindowSize(1920,1080);
+glutInitWindowPosition(50, 50);
 glutDisplayFunc(display);
 
 glutTimerFunc(100, update2, 0);
