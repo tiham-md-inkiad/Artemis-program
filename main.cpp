@@ -1640,7 +1640,118 @@ glPushMatrix();
    glEnd();
    }
 
+   if(mover==false)
+    {
+        glTranslatef(position3,0.0f,0);
+        glScaled(1.5,1.5,0.0);
 
+      glPushMatrix();
+   glBegin(GL_QUADS);///////////////// ////////////////BODY
+   glColor3ub(220,220,220);
+   glVertex2f(0.21f, -0.3f);//A
+   glVertex2f(0.21f, -0.45f);//C
+   glVertex2f(0.27f, -0.45f);//D
+   glVertex2f(0.27f, -0.3f);//B
+   glEnd();
+
+   glBegin(GL_QUADS);/////////////////////////////////// THROAT
+   glColor3ub(240,240,240);
+   glVertex2f(0.23f, -0.25f);//i
+   glVertex2f(0.23f, -0.3f);//j
+   glVertex2f(0.25f, -0.3f);//l
+   glVertex2f(0.25f, -0.25f);//k
+   glEnd();
+
+   GLfloat ph=0.24f; GLfloat qh=-0.27f; GLfloat rh=-0.025f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(ph,qh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  ph+(rh*cos(i*tp1/triangle1)), qh+(rh*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+   GLfloat ph1=0.24f; GLfloat qh1=-0.275f; GLfloat rh1=-0.021f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(245,68,12);
+   glVertex2f(ph,qh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  ph1+(rh1*cos(i*tp1/triangle1)), qh1+(rh1*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+
+   glBegin(GL_QUADS);///////////////////////////////////Left Hand
+   glColor3ub(245,68,12);
+   glVertex2f(0.2f, -0.3f);//E
+   glVertex2f(0.2f, -0.43f);//F
+   glVertex2f(0.21f, -0.43f);//G
+   glVertex2f(0.21f, -0.3f);//A
+   glEnd();
+
+   GLfloat plh=0.205f; GLfloat qlh=-0.43f; GLfloat rlh=-0.009f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(plh,qlh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  plh+(rlh*cos(i*tp1/triangle1)), qlh+(rlh*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+
+   glBegin(GL_QUADS);///////////////////////////////////Right Hand
+   glColor3ub(245,68,12);
+   glVertex2f(0.27f, -0.3f);//B
+   glVertex2f(0.27f, -0.43f);//J
+   glVertex2f(0.28f, -0.43f);//K
+   glVertex2f(0.28f, -0.3f);//L
+   glEnd();
+
+   GLfloat prh=0.275f; GLfloat qrh=-0.43f; GLfloat rrh=-0.009f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(prh,qrh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  prh+(rrh*cos(i*tp1/triangle1)), qrh+(rrh*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   glBegin(GL_QUADS);///////////////////////////////////Left leg
+   glColor3ub(245,68,12);
+   glVertex2f(0.215f, -0.45f);//M
+   glVertex2f(0.215f, -0.6f);//N
+   glVertex2f(0.23f, -0.6f);//O
+   glVertex2f(0.241f, -0.45f);//P
+   glEnd();
+
+   glBegin(GL_QUADS);///////////////////////////////////Right leg
+   glColor3ub(245,68,12);
+   glVertex2f(0.241f, -0.45f);//P
+   glVertex2f(0.25f, -0.6f);//Q
+   glVertex2f(0.265f, -0.6f);//R
+   glVertex2f(0.265f, -0.45f);//S
+   glEnd();
+
+   door=true;
+   road=true;
+
+   glPopMatrix();
+   }
 
 
 if(fire)
