@@ -1324,7 +1324,6 @@ glPushMatrix();
 
 
 
-
    if(land==false)
    {
        glClearColor(0.0f,0.0f,0.0f,1.0f);
@@ -1351,7 +1350,7 @@ glPushMatrix();
    glPopMatrix();
    }
 
-///************************rocket landing on moon
+///rocket landing on moon
 
        glPushMatrix();
 
@@ -1360,26 +1359,25 @@ glPushMatrix();
    glScalef(0.4f,0.4f,0.0f);
 
 
-   glBegin(GL_TRIANGLES); ///HEAD
+       glBegin(GL_TRIANGLES); //////////////HEAD
    glColor3ub(238,28,37);
 
-   glVertex2f(0.24f,0.6f);
-   glVertex2f(0.14f, 0.42f);
-   glVertex2f(0.34f, 0.42f);
+   glVertex2f(0.24f,0.6f);//a
+   glVertex2f(0.14f, 0.42f);//b
+   glVertex2f(0.34f, 0.42f);//c
    glEnd();
 
-
-   glBegin(GL_POLYGON);///HEAD  Lower Body
+   glBegin(GL_POLYGON);/////////////////HEAD  Lower Body
    glColor3ub(230,230,230);
-   glVertex2f(0.14f, 0.42f);
-   glVertex2f(0.14f, 0.08f);
-   glVertex2f(0.15f, 0.06f);
-   glVertex2f(0.33f, 0.06f);
-   glVertex2f(0.34f, 0.08f);
-   glVertex2f(0.34f, 0.42f);
+   glVertex2f(0.14f, 0.42f);//b
+   glVertex2f(0.14f, 0.08f);//d
+   glVertex2f(0.15f, 0.06f);//E
+   glVertex2f(0.33f, 0.06f);//f
+   glVertex2f(0.34f, 0.08f);//g
+   glVertex2f(0.34f, 0.42f);//c
    glEnd();
 
-   GLfloat pbg=0.24f; GLfloat qbg=0.25f; GLfloat rbg=-0.077f;///glass background
+   GLfloat pbg=0.24f; GLfloat qbg=0.25f; GLfloat rbg=-0.077f;////////////////////glass background
 
    glBegin(GL_TRIANGLE_FAN);
    glColor3ub(130,130,130);
@@ -1392,7 +1390,7 @@ glPushMatrix();
    }
    glEnd();
 
-   GLfloat pg=0.24f; GLfloat qg=0.25f; GLfloat rg=-0.07f; ///glass
+   GLfloat pg=0.24f; GLfloat qg=0.25f; GLfloat rg=-0.07f;////////////////////glass
 
    glBegin(GL_TRIANGLE_FAN);
    glColor3ub(35,172,196);
@@ -1405,72 +1403,69 @@ glPushMatrix();
    }
    glEnd();
 
-   glBegin(GL_QUADS); ///HEAD Lower Body shadow
+   glBegin(GL_QUADS); /////////////////HEAD Lower Body shadow
    glColor3ub(187,188,192);
-   glVertex2f(0.33f, 0.42f);
-   glVertex2f(0.33f, 0.06f);
-   glVertex2f(0.34f, 0.08f);
-   glVertex2f(0.34f, 0.42f);
+   glVertex2f(0.33f, 0.42f);//N'
+   glVertex2f(0.33f, 0.06f);//f
+   glVertex2f(0.34f, 0.08f);//g
+   glVertex2f(0.34f, 0.42f);//c
    glEnd();
 
-   glBegin(GL_QUADS); ///HEAD Lower Body QUAD
+   glBegin(GL_QUADS); /////////////////HEAD Lower Body QUAD
    glColor3ub(187,188,192);
-   glVertex2f(0.15f, 0.06f);
-   glVertex2f(0.15f, 0.01f);
-   glVertex2f(0.33f, 0.01f);
-   glVertex2f(0.33f, 0.06f);
+   glVertex2f(0.15f, 0.06f);//E
+   glVertex2f(0.15f, 0.01f);//H
+   glVertex2f(0.33f, 0.01f);//I
+   glVertex2f(0.33f, 0.06f);//f
    glEnd();
 
-   glBegin(GL_POLYGON); /// UNDER BODY QUAD
+   glBegin(GL_POLYGON); ///////////////// UNDER BODY QUAD
    glColor3ub(230,230,230);
-   glVertex2f(0.15f, 0.01f);
-   glVertex2f(0.14f, -0.01f);
-   glVertex2f(0.14f, -0.74f);
-   glVertex2f(0.34f, -0.74f);
-   glVertex2f(0.34f, -0.01f);
-   glVertex2f(0.33f, 0.01f);
+   glVertex2f(0.15f, 0.01f);//H
+   glVertex2f(0.14f, -0.01f);//K
+   glVertex2f(0.14f, -0.74f);//L
+   glVertex2f(0.34f, -0.74f);//M
+   glVertex2f(0.34f, -0.01f);//J
+   glVertex2f(0.33f, 0.01f);//I
    glEnd();
 
-   glBegin(GL_QUADS); ///UNDER BODY QUAD shadow
+   glBegin(GL_QUADS); /////////////////UNDER BODY QUAD shadow
    glColor3ub(187,188,192);
-   glVertex2f(0.33f, -0.74f);
-   glVertex2f(0.34f, -0.74f);
-   glVertex2f(0.34f, -0.01f);
-   glVertex2f(0.33f, 0.01f);
+   glVertex2f(0.33f, -0.74f);//N
+   glVertex2f(0.34f, -0.74f);//M
+   glVertex2f(0.34f, -0.01f);//J
+   glVertex2f(0.33f, 0.01f);//I
    glEnd();
 
+   ///opening door
 
-    ///Rocket Door
    if(door==false)
     {
    glBegin(GL_QUADS);
    glColor3ub(110,110,110);
-   glVertex2f(0.16f, -0.1f);
-   glVertex2f(0.16f, -0.6f);
-   glVertex2f(0.32f, -0.6f);
-   glVertex2f(0.32f, -0.1f);
+   glVertex2f(0.16f, -0.1f);//A'
+   glVertex2f(0.16f, -0.6f);//B'
+   glVertex2f(0.32f, -0.6f);//C'
+   glVertex2f(0.32f, -0.1f);//D'
    glEnd();
 
-   }
-
-
-   /// ASTRONATUE
+   ///ASTRONATUE
 
    glPushMatrix();
-   glBegin(GL_QUADS);///BODY
+   glBegin(GL_QUADS);///////////////// ////////////////BODY
    glColor3ub(220,220,220);
-   glVertex2f(0.21f, -0.3f);
-   glVertex2f(0.21f, -0.45f);
-   glVertex2f(0.27f, -0.45f);
-   glVertex2f(0.27f, -0.3f);
+   glVertex2f(0.21f, -0.3f);//A
+   glVertex2f(0.21f, -0.45f);//C
+   glVertex2f(0.27f, -0.45f);//D
+   glVertex2f(0.27f, -0.3f);//B
    glEnd();
 
-   glBegin(GL_QUADS);/// THROAT
+   glBegin(GL_QUADS);/////////////////////////////////// THROAT
    glColor3ub(240,240,240);
-   glVertex2f(0.23f, -0.25f);
-   glVertex2f(0.23f, -0.3f);
-   glVertex2f(0.25f, -0.3f);
-   glVertex2f(0.25f, -0.25f);
+   glVertex2f(0.23f, -0.25f);//i
+   glVertex2f(0.23f, -0.3f);//j
+   glVertex2f(0.25f, -0.3f);//l
+   glVertex2f(0.25f, -0.25f);//k
    glEnd();
 
    GLfloat ph=0.24f; GLfloat qh=-0.27f; GLfloat rh=-0.025f;
@@ -1499,12 +1494,12 @@ glPushMatrix();
    glEnd();
 
 
-   glBegin(GL_QUADS);///Left Hand
+   glBegin(GL_QUADS);///////////////////////////////////Left Hand
    glColor3ub(245,68,12);
-   glVertex2f(0.2f, -0.3f);
-   glVertex2f(0.2f, -0.43f);
-   glVertex2f(0.21f, -0.43f);
-   glVertex2f(0.21f, -0.3f);
+   glVertex2f(0.2f, -0.3f);//E
+   glVertex2f(0.2f, -0.43f);//F
+   glVertex2f(0.21f, -0.43f);//G
+   glVertex2f(0.21f, -0.3f);//A
    glEnd();
 
    GLfloat plh=0.205f; GLfloat qlh=-0.43f; GLfloat rlh=-0.009f;
@@ -1521,12 +1516,12 @@ glPushMatrix();
    glEnd();
 
 
-   glBegin(GL_QUADS);///Right Hand
+   glBegin(GL_QUADS);///////////////////////////////////Right Hand
    glColor3ub(245,68,12);
-   glVertex2f(0.27f, -0.3f);
-   glVertex2f(0.27f, -0.43f);
-   glVertex2f(0.28f, -0.43f);
-   glVertex2f(0.28f, -0.3f);
+   glVertex2f(0.27f, -0.3f);//B
+   glVertex2f(0.27f, -0.43f);//J
+   glVertex2f(0.28f, -0.43f);//K
+   glVertex2f(0.28f, -0.3f);//L
    glEnd();
 
    GLfloat prh=0.275f; GLfloat qrh=-0.43f; GLfloat rrh=-0.009f;
@@ -1542,69 +1537,72 @@ glPushMatrix();
    }
    glEnd();
 
-   glBegin(GL_QUADS);///Left leg
+   glBegin(GL_QUADS);///////////////////////////////////Left leg
    glColor3ub(245,68,12);
-   glVertex2f(0.215f, -0.45f);
-   glVertex2f(0.215f, -0.6f);
-   glVertex2f(0.23f, -0.6f);
-   glVertex2f(0.241f, -0.45f);
+   glVertex2f(0.215f, -0.45f);//M
+   glVertex2f(0.215f, -0.6f);//N
+   glVertex2f(0.23f, -0.6f);//O
+   glVertex2f(0.241f, -0.45f);//P
    glEnd();
 
-   glBegin(GL_QUADS);///Right leg
+   glBegin(GL_QUADS);///////////////////////////////////Right leg
    glColor3ub(245,68,12);
-   glVertex2f(0.241f, -0.45f);
-   glVertex2f(0.25f, -0.6f);
-   glVertex2f(0.265f, -0.6f);
-   glVertex2f(0.265f, -0.45f);
+   glVertex2f(0.241f, -0.45f);//P
+   glVertex2f(0.25f, -0.6f);//Q
+   glVertex2f(0.265f, -0.6f);//R
+   glVertex2f(0.265f, -0.45f);//S
    glEnd();
    glPopMatrix();
 
+   }
 
 
 
-   glBegin(GL_POLYGON); /// LEFT WING
+
+   glBegin(GL_POLYGON); ///////////////// LEFT WING
    glColor3ub(230,230,230);
 
 
-   glVertex2f(0.1f, -0.25f);
-   glVertex2f(0.05f, -0.25f);
-   glVertex2f(0.01f, -0.74f);
-   glVertex2f(0.14f, -0.74f);
-   glVertex2f(0.14f, -0.23f);
+   glVertex2f(0.1f, -0.25f);//P
+   glVertex2f(0.05f, -0.25f);//Q
+   glVertex2f(0.01f, -0.74f);//R
+   glVertex2f(0.14f, -0.74f);//L
+   glVertex2f(0.14f, -0.23f);//O
 
 
    glEnd();
 
-   glBegin(GL_QUADS); ///lEFT WING shadow
+   glBegin(GL_QUADS); /////////////////lEFT WING shadow
    glColor3ub(187,188,192);
-   glVertex2f(0.1f, -0.25f);
-   glVertex2f(0.06f, -0.74f);
-   glVertex2f(0.14f, -0.74f);
-   glVertex2f(0.14f, -0.23f);
+   glVertex2f(0.1f, -0.25f);//P
+   glVertex2f(0.06f, -0.74f);//S
+   glVertex2f(0.14f, -0.74f);//L
+   glVertex2f(0.14f, -0.23f);//O
    glEnd();
 
 
-   glBegin(GL_POLYGON);  ///RIGHT WING
+   ///////////////////////////////////////////RIGHT WING
+   glBegin(GL_POLYGON);
    glColor3ub(230,230,230);
 
 
-   glVertex2f(0.34f, -0.74f);
-   glVertex2f(0.47f, -0.74f);
-   glVertex2f(0.43f, -0.25f);
-   glVertex2f(0.38f, -0.25f);
-   glVertex2f(0.34f, -0.23f);
+   glVertex2f(0.34f, -0.74f);//M
+   glVertex2f(0.47f, -0.74f);//W
+   glVertex2f(0.43f, -0.25f);//V
+   glVertex2f(0.38f, -0.25f);//U
+   glVertex2f(0.34f, -0.23f);//T
 
    glEnd();
 
-   glBegin(GL_QUADS); ///RIGHT WING shadow
+   glBegin(GL_QUADS); /////////////////RIGHT WING shadow
    glColor3ub(187,188,192);
-   glVertex2f(0.38f, -0.25f);
-   glVertex2f(0.43f, -0.74f);
-   glVertex2f(0.47f, -0.74f);
-   glVertex2f(0.43f, -0.25f);
+   glVertex2f(0.38f, -0.25f);//U
+   glVertex2f(0.43f, -0.74f);//S'
+   glVertex2f(0.47f, -0.74f);//W
+   glVertex2f(0.43f, -0.25f);//V
    glEnd();
 
-   glBegin(GL_QUADS); ///LEFT fIRE EXIT
+   glBegin(GL_QUADS); /////////////////LEFT fIRE EXIT
    glColor3ub(96,96,96);
    glVertex2f(0.05f, -0.74f);
    glVertex2f(0.04f, -0.79f);
@@ -1612,7 +1610,7 @@ glPushMatrix();
    glVertex2f(0.1f, -0.74f);
    glEnd();
 
-   glBegin(GL_QUADS); ///CENTER fIRE EXIT
+   glBegin(GL_QUADS); /////////////////CENTER fIRE EXIT
    glColor3ub(96,96,96);
    glVertex2f(0.215f, -0.74f);
    glVertex2f(0.205f, -0.79f);
@@ -1620,13 +1618,27 @@ glPushMatrix();
    glVertex2f(0.265f, -0.74f);
    glEnd();
 
-   glBegin(GL_QUADS); ///RIGHT fIRE EXIT
+   glBegin(GL_QUADS); /////////////////RIGHT fIRE EXIT
    glColor3ub(96,96,96);
    glVertex2f(0.38f, -0.74f);
    glVertex2f(0.37f, -0.79f);
    glVertex2f(0.44f, -0.79f);
    glVertex2f(0.43f, -0.74f);
    glEnd();
+
+
+   if(road==false)
+    {
+
+   glBegin(GL_QUADS);
+   glColor3ub(80,80,200);
+   glVertex2f(0.16f, -0.6f);//B'
+   glVertex2f(0.05f, -0.9f);//E'
+   glVertex2f(0.21f, -0.9f);//F'
+   glVertex2f(0.32f, -0.6f);//C'
+
+   glEnd();
+   }
 
 
 
@@ -1656,6 +1668,11 @@ if(fire)
 }
 glPopMatrix();
 
+}
+
+   if(fireoff==false)
+   {
+       fire=false;
    }
 
 
@@ -1683,8 +1700,18 @@ switch (key) {
 case 'l':
     land=false;
     break;
+case '0':
+    fireoff=false;
+    break;
 case 'd':
     door=false;
+    break;
+case 'r':
+    road=false;
+    break;
+case 'm':
+    mover=false;
+    speed3=0.02;
     break;
 
 glutPostRedisplay();
