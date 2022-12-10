@@ -1333,7 +1333,23 @@ glPushMatrix();
    glPushMatrix();
 
 
+///Earth From moon
+{
+       GLfloat pm=0.24f; GLfloat qm=0.40f; GLfloat rm=-0.077f;
 
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(40, 122, 184);
+   glVertex2f(pm,qm);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  pm+(rm*cos(i*tp1/triangle1)), qm+(rm*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   glPopMatrix();
+   }
 
 ///************************rocket landing on moon
 
@@ -1423,6 +1439,129 @@ glPushMatrix();
    glVertex2f(0.33f, 0.01f);
    glEnd();
 
+
+    ///Rocket Door
+   if(door==false)
+    {
+   glBegin(GL_QUADS);
+   glColor3ub(110,110,110);
+   glVertex2f(0.16f, -0.1f);
+   glVertex2f(0.16f, -0.6f);
+   glVertex2f(0.32f, -0.6f);
+   glVertex2f(0.32f, -0.1f);
+   glEnd();
+
+   }
+
+
+   /// ASTRONATUE
+
+   glPushMatrix();
+   glBegin(GL_QUADS);///BODY
+   glColor3ub(220,220,220);
+   glVertex2f(0.21f, -0.3f);
+   glVertex2f(0.21f, -0.45f);
+   glVertex2f(0.27f, -0.45f);
+   glVertex2f(0.27f, -0.3f);
+   glEnd();
+
+   glBegin(GL_QUADS);/// THROAT
+   glColor3ub(240,240,240);
+   glVertex2f(0.23f, -0.25f);
+   glVertex2f(0.23f, -0.3f);
+   glVertex2f(0.25f, -0.3f);
+   glVertex2f(0.25f, -0.25f);
+   glEnd();
+
+   GLfloat ph=0.24f; GLfloat qh=-0.27f; GLfloat rh=-0.025f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(ph,qh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  ph+(rh*cos(i*tp1/triangle1)), qh+(rh*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+   GLfloat ph1=0.24f; GLfloat qh1=-0.275f; GLfloat rh1=-0.021f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(245,68,12);
+   glVertex2f(ph,qh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  ph1+(rh1*cos(i*tp1/triangle1)), qh1+(rh1*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+
+   glBegin(GL_QUADS);///Left Hand
+   glColor3ub(245,68,12);
+   glVertex2f(0.2f, -0.3f);
+   glVertex2f(0.2f, -0.43f);
+   glVertex2f(0.21f, -0.43f);
+   glVertex2f(0.21f, -0.3f);
+   glEnd();
+
+   GLfloat plh=0.205f; GLfloat qlh=-0.43f; GLfloat rlh=-0.009f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(plh,qlh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  plh+(rlh*cos(i*tp1/triangle1)), qlh+(rlh*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+
+   glBegin(GL_QUADS);///Right Hand
+   glColor3ub(245,68,12);
+   glVertex2f(0.27f, -0.3f);
+   glVertex2f(0.27f, -0.43f);
+   glVertex2f(0.28f, -0.43f);
+   glVertex2f(0.28f, -0.3f);
+   glEnd();
+
+   GLfloat prh=0.275f; GLfloat qrh=-0.43f; GLfloat rrh=-0.009f;
+
+   glBegin(GL_TRIANGLE_FAN);
+   glColor3ub(240,240,240);
+   glVertex2f(prh,qrh);
+   for(i=0; i<=triangle1;i++)
+   {
+       glVertex2f(
+                  prh+(rrh*cos(i*tp1/triangle1)), qrh+(rrh*sin(i*tp1/triangle1))
+                  );
+   }
+   glEnd();
+
+   glBegin(GL_QUADS);///Left leg
+   glColor3ub(245,68,12);
+   glVertex2f(0.215f, -0.45f);
+   glVertex2f(0.215f, -0.6f);
+   glVertex2f(0.23f, -0.6f);
+   glVertex2f(0.241f, -0.45f);
+   glEnd();
+
+   glBegin(GL_QUADS);///Right leg
+   glColor3ub(245,68,12);
+   glVertex2f(0.241f, -0.45f);
+   glVertex2f(0.25f, -0.6f);
+   glVertex2f(0.265f, -0.6f);
+   glVertex2f(0.265f, -0.45f);
+   glEnd();
+   glPopMatrix();
+
+
+
+
    glBegin(GL_POLYGON); /// LEFT WING
    glColor3ub(230,230,230);
 
@@ -1490,6 +1629,8 @@ glPushMatrix();
    glEnd();
 
 
+
+
 if(fire)
 {
    glBegin(GL_TRIANGLES);///left fire
@@ -1515,38 +1656,9 @@ if(fire)
 }
 glPopMatrix();
 
-///Earth From moon
-{
-       GLfloat pm=0.24f; GLfloat qm=0.40f; GLfloat rm=-0.077f;
-
-   glBegin(GL_TRIANGLE_FAN);
-   glColor3ub(40, 122, 184);
-   glVertex2f(pm,qm);
-   for(i=0; i<=triangle1;i++)
-   {
-       glVertex2f(
-                  pm+(rm*cos(i*tp1/triangle1)), qm+(rm*sin(i*tp1/triangle1))
-                  );
-   }
-   glEnd();
-
-   glPopMatrix();
    }
 
-///Rocket Door
-   if(door==false)
-    {
-   glBegin(GL_QUADS);
-   glColor3ub(110,110,110);
-   glVertex2f(0.16f, -0.1f);//A'
-   glVertex2f(0.16f, -0.6f);//B'
-   glVertex2f(0.32f, -0.6f);//C'
-   glVertex2f(0.32f, -0.1f);//D'
-   glEnd();
 
-}
-
-   }
 glFlush();
 
 }
